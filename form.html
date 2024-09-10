@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Japan</title>
+    <style>
+        body {
+            background-color: #fffbda;
+        }
+
+        header, footer {
+            background-color: rgb(255, 203, 83);
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Culinary Japan</h1>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="recipes.html">recipes</a>
+            <a href="form.html">form</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Send the recipe</h1> 
+        <form action="/submit_recipe" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="hot_dish">Foods</option>
+                <option value="dessert">Desserts</option>
+                <option value="drink">Drinks</option>
+            </select><br><br>
+
+            <label for="recipe">Recipe description:</label>
+            <textarea id="recipe" name="recipe" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </main>
+
+    <footer>
+        <p>Sailau Ayaulym</p>
+        <p>SE-2322</p>
+        <p>10.09.24</p>
+    </footer>
+</body>
+</html>
