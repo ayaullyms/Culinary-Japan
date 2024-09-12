@@ -33,26 +33,27 @@
             <a href="form.html">form</a>
         </nav>
     </header>
-
+    
     <main>
-        <h1>Send the recipe</h1> 
+        <h1>Send the recipe</h1>
         <form action="/submit_recipe" method="post">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required><br><br>
-
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+    
             <label for="category">Category:</label>
             <select id="category" name="category">
                 <option value="hot_dish">Foods</option>
                 <option value="dessert">Desserts</option>
                 <option value="drink">Drinks</option>
-            </select><br><br>
-
+            </select><br>
+    
             <label for="recipe">Recipe description:</label>
-            <textarea id="recipe" name="recipe" rows="4" cols="50"></textarea><br><br>
-
-            <input type="submit" value="Отправить">
+            <textarea id="recipe" name="recipe" rows="4" cols="50"></textarea><br>
+    
+            <input type="submit" value="Send">
         </form>
     </main>
+    
 
     <footer>
         <p>Sailau Ayaulym</p>
