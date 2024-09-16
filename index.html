@@ -3,77 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial- scale=1.0">
-<title>Culinary Japan</title> </head>
-<style>
-    body {
-        background-color: #fffbda;
-    }
+<title>Culinary Japan</title> 
+<link rel="stylesheet" href="style.css">
+</head>
 
-    header, footer {
-        background-color: rgb(255, 203, 83);
-        color: #FFFFFF;
-        text-align: center;
-    }
-
-
-    h1 {
-            text-align: center;
-        }
-
-</style>
 <body>
     <header>
-        <h1>Welcome to Culinary Japan</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="recipes.html">recipes</a>
-            <a href="form.html">form</a>
+        <nav class="navbar">
+            <h1>Japanese Cuisine</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">recipes</a></li>
+                <li><a href="form.html">form</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>About Our Cooking Community</h2>
-            <p>Welcome to our community dedicated to learning Japanese cuisine! We collect and share recipes that reflect the tastes and traditions of Japan. Whether you are an experienced chef or an inquisitive beginner, you will find something that will inspire you.</p>
-        </section>
-
-        <section>
-            <figure>
-                <img src="foods.png" alt="picture" width="900" height="150">
-            </figure>
-        </section>
-        <hr>
-
-        <h1><a href="recipes.html">recipes</a></h1>
-        <section>
-            <h2>Foods</h2>
-            <ul>
-                <li><a href="ramen.html">Ramen</a></li> 
-                <li>Udon</li> 
-            </ul>
-        </section>
-
-        <section>
-            <h2>Drinks</h2>
-            <ul>
-                <li>Chuhai</li> 
-                <li>Iced Matcha Float</li> 
-            </ul>
+        <section class="welcome-section">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1>Japanese cuisine</h1>
+                    <p class="welcome-text">Welcome to our community dedicated to learning Japanese cuisine! We collect and share recipes that reflect the tastes and traditions of Japan. Whether you are an experienced chef or an inquisitive beginner, you will find something that will inspire you.</p>
+                </div>
+                <div class="photo-content">
+                    <img src="photo.jpeg" alt="Main Photo">
+                    <blockquote class="quote-text">"Japanese cuisine is an art that balances flavor, presentation, and tradition, where each dish is a reflection of the season and a harmony of taste and aesthetic"</blockquote>
+                </div>
+            </div>
         </section>
         
-        <section>
-            <h2>Deserts</h2>
-            <ul>
-                <li>dorayaki</li> 
-                <li>Castella cake</li> 
-            </ul>
+        <hr>
+
+        <section class="recipes-section">
+            <h2><a href="recipes.html"></a>Recipes</a></h2>
+            <div class="recipes-wrapper">
+                <div class="recipe-card">
+                    <img src="Chicken-miso-ramen.jpg" alt="Recipe Photo">
+                    <p class="recipe-name">Ramen</p>
+                    <p class="recipe-description">30 minut</p>
+                </div>
+                <div class="recipe-card">
+                    <img src="udon-noodle-soup-sq-7.jpg" alt="Recipe Photo">
+                    <p class="recipe-name">Udon</p>
+                    <p class="recipe-description">20 minut</p>
+                </div>
+                <div class="recipe-card">
+                    <img src="Castella-Cake_SC_1.webp" alt="Recipe Photo">
+                    <p class="recipe-name">Castells</p>
+                    <p class="recipe-description">50 minut</p>
+                </div>
+                <div class="recipe-card">
+                    <img src="basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg" alt="Tempura">
+                    <p class="recipe-name">Tempura</p>
+                    <p class="recipe-description">25 minutes</p>
+                </div>
+            </div>
+            <div class="more-recipes">
+                <a href="recipes.html" class="more-button">More Recipes</a>
+            </div> 
         </section>
     </main>
 
     <footer>
         <p>Sailau Ayaulym</p>
         <p>SE-2322</p>
-        <p>10.09.24</p>
     </footer>
 
 </body>

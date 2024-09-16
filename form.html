@@ -1,63 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Culinary Japan</title>
-    <style>
-        body {
-            background-color: #fffbda;
-        }
-
-        header, footer {
-            background-color: rgb(255, 203, 83);
-            color: #FFFFFF;
-            text-align: center;
-        }
-
-        form {
-            margin: 0 auto;
-            width: 300px;
-        }
-        h1 {
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0">
+<title>Culinary Japan</title> 
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Welcome to Culinary Japan</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="recipes.html">recipes</a>
-            <a href="form.html">form</a>
+        <nav class="navbar">
+            <h1>Japanese Cuisine</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">recipes</a></li>
+                <li><a href="form.html">form</a></li>
+            </ul>
         </nav>
     </header>
-
-    <main>
-        <h1>Send the recipe</h1>
+    <main class = "form-page">
+        <h1>Send the Recipe</h1>
+        <form action="submit_form.html" method="post">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-    
+            <input type="text" id="name" name="name" required>
+
             <label for="category">Category:</label>
             <select id="category" name="category">
                 <option value="hot_dish">Foods</option>
                 <option value="dessert">Desserts</option>
                 <option value="drink">Drinks</option>
-            </select><br>
-    
+            </select>
             <label for="recipe">Recipe description:</label>
-            <textarea id="recipe" name="recipe" ></textarea><br>
-    
+            <textarea id="recipe" name="recipe" rows="5" required></textarea>
             <input type="submit" value="Send">
         </form>
     </main>
-    
-
     <footer>
         <p>Sailau Ayaulym</p>
         <p>SE-2322</p>
-        <p>10.09.24</p>
     </footer>
 </body>
 </html>
