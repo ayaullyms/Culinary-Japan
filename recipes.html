@@ -4,82 +4,118 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial- scale=1.0">
 <title>Culinary Japan</title> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <h1>Japanese Cuisine</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">recipes</a></li>
-                <li><a href="form.html">form</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Japanese Cuisine</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="recipes.html">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html">Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <section class="recipes-section">
-            <h2>All Recipes</h2>
-            <div class="recipes-wrapper">
-                <div class="recipe-card">
-                    <a href="all_recipes.html#ramen"> 
-                        <img src="Chicken-miso-ramen.jpg" alt="Ramen">
-                        <p class="recipe-name" a href="all_recipes.html#ramen">Ramen</p>
-                        <p class="recipe-description">30 minutes</p>
-                    </a>
+        <h2>All Recipes</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#ramen"> 
+                            <img src="Chicken-miso-ramen.jpg" alt="Ramen">
+                            <p class="recipe-name">Ramen</p>
+                            <p class="recipe-description">30 minutes</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#udon"> 
-                        <img src="udon-noodle-soup-sq-7.jpg" alt="Udon">
-                        <p class="recipe-name">Udon</p>
-                        <p class="recipe-description">20 minutes</p>
-                    </a>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#udon"> 
+                            <img src="udon-noodle-soup-sq-7.jpg" alt="Udon">
+                            <p class="recipe-name">Udon</p>
+                            <p class="recipe-description">20 minutes</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#castella"> 
-                        <img src="Castella-Cake_SC_1.jpeg" alt="Castella">
-                        <p class="recipe-name">Castella</p>
-                        <p class="recipe-description">50 minutes</p>
-                    </a> 
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#castella"> 
+                            <img src="Castella-Cake_SC_1.jpeg" alt="Castella">
+                            <p class="recipe-name">Castella</p>
+                            <p class="recipe-description">50 minutes</p>
+                        </a> 
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#tempura"> 
-                        <img src="basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg" alt="Tempura">
-                        <p class="recipe-name">Tempura</p>
-                        <p class="recipe-description">25 minutes</p>
-                    </a>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#tempura"> 
+                            <img src="basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg" alt="Tempura">
+                            <p class="recipe-name">Tempura</p>
+                            <p class="recipe-description">25 minutes</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#sushi"> 
-                        <img src="sushi-polza-i-vred1653924777.jpg" alt="Sushi">
-                        <p class="recipe-name">Sushi</p>
-                        <p class="recipe-description">40 minutes</p>
-                    </a>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#sushi"> 
+                            <img src="sushi-polza-i-vred1653924777.jpg" alt="Sushi">
+                            <p class="recipe-name">Sushi</p>
+                            <p class="recipe-description">40 minutes</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#dango"> 
-                        <img src="images.jpeg" alt="Dango">
-                        <p class="recipe-name">Dango</p>
-                        <p class="recipe-description">15 minutes</p>
-                    </a>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#dango"> 
+                            <img src="images.jpeg" alt="Dango">
+                            <p class="recipe-name">Dango</p>
+                            <p class="recipe-description">15 minutes</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#teriyaki"> 
-                        <img src="Honey-Teriyaki-Chicken-5.jpg" alt="Teriyaki Chicken">
-                        <p class="recipe-name">Teriyaki Chicken</p>
-                        <p class="recipe-description">15 minutes</p>
-                    </a>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#teriyaki"> 
+                            <img src="Honey-Teriyaki-Chicken-5.jpg" alt="Teriyaki Chicken">
+                            <p class="recipe-name">Teriyaki Chicken</p>
+                            <p class="recipe-description">15 minutes</p>
+                        </a>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <a href="all_recipes.html#omuraisu"> 
-                        <img src="merlin_141075450_0113642e-e841-4dd6-b96f-742a29fdef10-superJumbo.jpg" alt="Omuraisu">
-                        <p class="recipe-name">Omuraisu</p>
-                        <p class="recipe-description">15 minutes</p>
-                    </a>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <div class="recipe-card">
+                        <a href="all_recipes.html#omuraisu"> 
+                            <img src="merlin_141075450_0113642e-e841-4dd6-b96f-742a29fdef10-superJumbo.jpg" alt="Omuraisu">
+                            <p class="recipe-name">Omuraisu</p>
+                            <p class="recipe-description">15 minutes</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <footer>
