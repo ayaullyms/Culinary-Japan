@@ -52,7 +52,7 @@ header nav ul {
     margin: 0 auto;
 }
 
-.text-content {
+/* .text-content {
     flex: 1;
     margin-right: 40px;
 }
@@ -86,7 +86,7 @@ header nav ul {
     font-size: 1em;
     font-style: italic;
     color: #7f8c8d;
-}
+} */
 
 .recipes-section {
     padding: 60px 20px;
@@ -140,14 +140,27 @@ header nav ul {
 
 .more-button {
     display: inline-block;
-    width: 1020px;
-    background-color: #FF8C00;
-    color: #000000;
     text-align: center;
+    width: 200px;
+    background-color: #FF8C00;
+    color: #333;
     padding: 15px;
     font-size: 1em;
-    margin: 50px;
+    margin: 50px 0;
+    font-weight: 500;
     text-decoration: none; 
+}
+
+.more-button:hover {
+    color: #e74c3c; 
+}
+
+.more-recipes {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;            
+    margin: 0;              
 }
 
 .form-page  {
