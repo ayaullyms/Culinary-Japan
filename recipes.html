@@ -32,10 +32,35 @@
                             <a class="nav-link" href="form.html">Form</a>
                         </li>
                     </ul>
+                    <button id="changeColorBtn" class="change-color-btn ms-3">Change Background Color</button>
                 </div>
             </div>
         </nav>
+        <div class="text-center mt-3" id="dateTime"></div>
     </header>
+
+    <!-- Task 4 Change Background Color -->
+    <script>
+        const colors = ['#F0E68C' , '#ADD8E6' , '#ADD8E6' , '#FAF0E6' , '#E0FFFF' , '#E6E6FA' ,  ];
+        function changeBackgroundColor() {
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+        document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
+    </script>
+    
+    <!-- Task 5 Display Current Date and Time -->   
+    <script>
+      function displayDateTime() {
+        const dateTimeElement = document.getElementById('dateTime'); 
+        const now = new Date(); 
+        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+        dateTimeElement.innerHTML = now.toLocaleString('en-US', options); 
+    }
+        displayDateTime();
+        setInterval(displayDateTime, 60000);
+    </script>
+
     <main>
         <section class="recipes-section">
         <h2>All Recipes</h2>
