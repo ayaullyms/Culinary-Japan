@@ -39,28 +39,6 @@
         <div class="text-center mt-3" id="dateTime"></div>
     </header>
 
-    <!-- Task 4 Change Background Color -->
-    <script>
-        const colors = ['#F0E68C' , '#ADD8E6' , '#ADD8E6' , '#FAF0E6' , '#E0FFFF' , '#E6E6FA' ,  ];
-        function changeBackgroundColor() {
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.backgroundColor = randomColor;
-        }
-        document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
-    </script>
-    
-    <!-- Task 5 Display Current Date and Time -->   
-    <script>
-      function displayDateTime() {
-        const dateTimeElement = document.getElementById('dateTime'); 
-        const now = new Date(); 
-        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
-        dateTimeElement.innerHTML = now.toLocaleString('en-US', options); 
-    }
-        displayDateTime();
-        setInterval(displayDateTime, 60000);
-    </script>
-
     <main>
         <section class="recipes-section">
         <h2>All Recipes</h2>
@@ -71,8 +49,15 @@
                         <a href="all_recipes.html#ramen"> 
                             <img src="Chicken-miso-ramen.jpg" alt="Ramen">
                             <p class="recipe-name">Ramen</p>
-                            <p class="recipe-description">30 minutes</p>
+                            
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -80,8 +65,15 @@
                         <a href="all_recipes.html#udon"> 
                             <img src="udon-noodle-soup-sq-7.jpg" alt="Udon">
                             <p class="recipe-name">Udon</p>
-                            <p class="recipe-description">20 minutes</p>
+                            
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -89,8 +81,15 @@
                         <a href="all_recipes.html#castella"> 
                             <img src="Castella-Cake_SC_1.jpeg" alt="Castella">
                             <p class="recipe-name">Castella</p>
-                            <p class="recipe-description">50 minutes</p>
+                         
                         </a> 
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -98,8 +97,15 @@
                         <a href="all_recipes.html#tempura"> 
                             <img src="basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg" alt="Tempura">
                             <p class="recipe-name">Tempura</p>
-                            <p class="recipe-description">25 minutes</p>
+                            
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -107,8 +113,15 @@
                         <a href="all_recipes.html#sushi"> 
                             <img src="sushi-polza-i-vred1653924777.jpg" alt="Sushi">
                             <p class="recipe-name">Sushi</p>
-                            <p class="recipe-description">40 minutes</p>
+                           
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -116,8 +129,15 @@
                         <a href="all_recipes.html#dango"> 
                             <img src="images.jpeg" alt="Dango">
                             <p class="recipe-name">Dango</p>
-                            <p class="recipe-description">15 minutes</p>
+                            
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -125,8 +145,15 @@
                         <a href="all_recipes.html#teriyaki"> 
                             <img src="Honey-Teriyaki-Chicken-5.jpg" alt="Teriyaki Chicken">
                             <p class="recipe-name">Teriyaki Chicken</p>
-                            <p class="recipe-description">15 minutes</p>
+                           
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
@@ -134,8 +161,15 @@
                         <a href="all_recipes.html#omuraisu"> 
                             <img src="merlin_141075450_0113642e-e841-4dd6-b96f-742a29fdef10-superJumbo.jpg" alt="Omuraisu">
                             <p class="recipe-name">Omuraisu</p>
-                            <p class="recipe-description">15 minutes</p>
+                            
                         </a>
+                        <div class="rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,6 +181,8 @@
         <p>Sailau Ayaulym</p>
         <p>SE-2322</p>
     </footer>
+    <script src="assignment4.js" ></script>
+    <script src="assignment5.js" ></script>
 
 </body>
 </html>
