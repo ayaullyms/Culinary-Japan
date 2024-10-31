@@ -117,6 +117,9 @@ body {
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
 
 .more-button {
     background-color: #FF8C00;
@@ -219,7 +222,14 @@ body {
 
 button {
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    background-color: #FF8C00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
 }
 
 #dateTime {
@@ -277,6 +287,49 @@ button {
 
 .star.selected {
     color: gold;
+}
+
+.form-step {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-step {
+    display: none; 
+    flex-direction: column;
+}
+
+.form-step h2 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-step.active {
+    display: flex; 
+}
+
+.next-button,
+.back-button {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.back-button {
+    background-color: #e74c3c; 
 }
 
 
