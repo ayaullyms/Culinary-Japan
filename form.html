@@ -26,10 +26,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="recipes.html">Recipes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="authentication.html">Login/Logout</a>
+                        </li>
                         
                     </ul>
                     <button id="changeColorBtn" class="change-color-btn ms-3">Change Background Color</button>
                     <button id="changeModeBtn" class="change-color-btn ms-3"> light/Night mode</button>
+                    <button id="playSoundButton" class="change-color-btn ms-3" >Play Sound</button>
                     
                 </div>
             </div>
@@ -68,6 +72,7 @@
     </main> 
 
     <main class="form-page">
+        <h1>Send the feedback</h1>
         <form id="multiStepForm">
            
             <div class="form-step" id="step-1">
@@ -84,11 +89,15 @@
                 <button type="button" class="back-button">Back</button>
                 <button type="button" class="next-button">Next</button>
             </div>
-    
+
             <div class="form-step" id="step-3" style="display: none;">
-                <h2>Step 3: Account Details</h2>
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
+                <h2>Step 3: If we added a blog with cooking tips and cultural articles, would you be interested?</h2>
+                <label>
+                    <input type="checkbox" name="interests" value="yes">yes
+                </label>
+                <label>
+                    <input type="checkbox" name="interests" value="no"> no
+                </label>
                 <button type="button" class="back-button">Back</button>
                 <button type="submit">Submit</button>
             </div>

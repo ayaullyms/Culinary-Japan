@@ -28,10 +28,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="form.html">Form</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="authentication.html">Login/Logout</a>
+                        </li>
                         
                     </ul>
                     <button id="changeColorBtn" class="change-color-btn ms-3">Change Background Color</button>
-                    <button id="changeModeBtn" class="change-color-btn ms-3"> light/Night mode</button>
+                    <button id="changeModeBtn" class="change-color-btn ms-3">Light/Night mode</button>
                     <button id="playSoundButton" class="change-color-btn ms-3" >Play Sound</button>
                 </div>
             </div>
@@ -39,14 +42,14 @@
         <div class="text-center mt-3" id="dateTime"></div>
     </header>
  
-    <div class="greeting-container">
+    <!-- <div class="greeting-container">
         <p id="greetingMessage"></p>
     </div>
 
     <section class="welcome-section mb-5 text-center">
         <h1 id="welcomeMessage">Welcome to Japanese Cuisine</h1>
         <button id="changeMessageBtn" class="btn btn-secondary mt-3">Change Message</button>
-    </section>
+    </section> -->
     
     <main class="container-fluid py-5">
         <section class="welcome-section mb-5">
@@ -80,44 +83,54 @@
                                 <p class="recipe-name">Ramen</p>
                             </a>
                             <div id="ramen-more" class="recipe-more" style="display: none;">
-                                <p>Ramen is a traditional Japanese noodle soup with rich flavors. It has a variety of toppings, including egg, pork, and vegetables.</p>
+                                <p>Japanese soup with wheat noodles, meat broth, and various additives.</p>
                             </div>
                             <button class="btn btn-primary read-more-btn" onclick="ReadMore('ramen-more')">Read More</button>
                         </div>
-                    </div>                    
+                    </div>
+        
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="recipe-card p-3">
                             <a href="all_recipes.html#udon"> 
                                 <img src="udon-noodle-soup-sq-7.jpg" alt="Udon" class="mb-3 w-100">
                                 <p class="recipe-name">Udon</p>
-                         
                             </a>
+                            <div id="udon-more" class="recipe-more" style="display: none;">
+                                <p>Thick wheat noodles, usually served in soup or with sauce.</p>
+                            </div>
+                            <button class="btn btn-primary read-more-btn" onclick="ReadMore('udon-more')">Read More</button>
                         </div>
                     </div>
+        
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="recipe-card p-3">
                             <a href="all_recipes.html#castella"> 
                                 <img src="Castella-Cake_SC_1.jpeg" alt="Castella" class="mb-3 w-100">
                                 <p class="recipe-name">Castella</p>
-                               
-                            </a> 
-                        </div>
+                            </a>
+                            <div id="castella-more" class="recipe-more" style="display: none;">
+                                <p>Japanese sponge cake with a soft texture and sweet taste.</p>
+                            </div>
+                            <button class="btn btn-primary read-more-btn" onclick="ReadMore('castella-more')">Read More</button>
+                        </div> 
                     </div>
+        
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="recipe-card p-3">
                             <a href="all_recipes.html#tempura"> 
                                 <img src="basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg" alt="Tempura" class="mb-3 w-100">
                                 <p class="recipe-name">Tempura</p>
-                                
                             </a>
+                            <div id="tempura-more" class="recipe-more" style="display: none;">
+                                <p>Vegetables or seafood in a light crispy batter, deep fried.</p>
+                            </div>
+                            <button class="btn btn-primary read-more-btn" onclick="ReadMore('tempura-more')">Read More</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="d-grid gap-2 col-6 mx-auto mt-5">
-                <a href="recipes.html" class="btn btn-primary more-button">More Recipes</a>
-            </div>        
         </section>
+        
 
         <hr>
 

@@ -9,22 +9,28 @@
 displayDateTime();
 setInterval(displayDateTime, 60000);
 
+
  // Task 4 Change Background Color 
+ document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
  const colors = ['#F0E68C' , '#ADD8E6' , '#FAF0E6' , '#E0FFFF' , '#E6E6FA'];
  function changeBackgroundColor() {
      const randomColor = colors[Math.floor(Math.random() * colors.length)];
      document.body.style.backgroundColor = randomColor;
  }
 
-// Task 2 Switch Statements
+
+
+// Task 2 Switch Statements + filter 
 function filterRecipes(category) {
+    localStorage.setItem('recipeFilter', category);
     const recipes = document.querySelectorAll('.recipe-card');
-    
     recipes.forEach(recipe => {
         recipe.classList.remove('hidden');
-
+    });
+    recipes.forEach(recipe => {
         switch (category) {
             case 'all':
+
                 break;
             case 'sweet':
                 if (!recipe.classList.contains('sweet')) {
@@ -47,12 +53,17 @@ function filterRecipes(category) {
         }
     });
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const savedFilter = localStorage.getItem('recipeFilter') || 'all';
+    filterRecipes(savedFilter);
+});
+
 
 //song play 
 document.getElementById('playSoundButton').addEventListener('click', () => {
     const sound = new Audio('Howl.mp3');
     sound.play().catch(error => {
-        console.error("Ошибка при воспроизведении:", error);
+        console.error(error);
     });
 });
 
@@ -83,9 +94,17 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
     this.submit();
 });
 
+// Task 2 Accordion for FAQs or Content Sections
+let accordion = document.getElementsByClassName('accordion-title');
+if (accordion.length > 0) {
+    for (let i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener('click', function() {
+            let content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+    }
+}
 
-
-document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
 
 // Task 3 Popup Subscription
 const popupForm = document.getElementById('popupForm');
@@ -106,16 +125,7 @@ window.addEventListener('click', function(event) {
     }
 });
 
-// Task 2 Accordion for FAQs or Content Sections
-let accordion = document.getElementsByClassName('accordion-title');
-if (accordion.length > 0) {
-    for (let i = 0; i < accordion.length; i++) {
-        accordion[i].addEventListener('click', function() {
-            let content = this.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        });
-    }
-}
+
 
 
 

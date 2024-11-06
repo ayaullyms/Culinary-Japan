@@ -31,22 +31,42 @@ body {
 
 .night-theme {
     background-color: #2c3e50;
-    color: #ecf0f1;
+    color: #f8feff;
 }
 
 .night-theme .navbar {
-    background-color: #34495e;
+    background-color: #566a7d;
+    color: #f8feff;
+
+}
+
+.night-theme .navbar-nav .nav-item .nav-link  {
+    color:#ddd;
+}
+
+.night-theme footer{
+    background-color: #566a7d;
+    color: #f8feff;
+}
+
+.night-theme .accordion-title {
+    background-color: #17496a;
+    color: #f8feff;
+}
+
+.night-theme .more-button{
+    background-color: #17496a;
+    color: #f8feff;
 }
 
 .night-theme .change-color-btn {
-    background-color: #3498db;
+    background-color: #17496a;
     color: #fff;
 }
 
-.greeting-container {
+/* .greeting-container {
     text-align: center;
-}
-
+} */
 
 .content-wrapper {
     display: flex;
@@ -171,6 +191,85 @@ body {
 .form-check-input {
     font-size: 1.2em;
     padding: 10px;
+}
+
+.form-page1 {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-page1 h1 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.auth-form, #logoutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button-container1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-container1 .btn {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-container1 .btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.button-container1 .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.button-container1 .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.button-container1 .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+#logoutContainer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .faq-section {
@@ -331,7 +430,6 @@ input[type="password"] {
 .back-button {
     background-color: #e74c3c; 
 }
-
 
 footer {
     background-color: #FF8C00;

@@ -1,3 +1,11 @@
+// // Task 1 Welcome Message
+// const welcomeMessage = document.getElementById('welcomeMessage');
+// const changeMessageBtn = document.getElementById('changeMessageBtn');
+// changeMessageBtn.addEventListener('click', function() {
+//     welcomeMessage.textContent = "Enjoy our Japanese Recipes!";
+// });
+
+
 // Task 1 Manipulating Attributes STAR STAR STAR
 document.querySelectorAll('.rating .star').forEach(star => {
     star.addEventListener('click', function() {
@@ -13,17 +21,64 @@ document.querySelectorAll('.rating .star').forEach(star => {
     });
 });
 
-
 // Task 1 Change Mode
 const changeModeBtn = document.getElementById('changeModeBtn');
+document.addEventListener("DOMContentLoaded", function() {
+    const savedMode = localStorage.getItem('theme');
+    if (savedMode === 'night') {
+        document.body.classList.add('night-theme');
+    }
+});
 if (changeModeBtn) {
     changeModeBtn.addEventListener('click', function() {
         document.body.classList.toggle('night-theme');
+
+        if (document.body.classList.contains('night-theme')) {
+            localStorage.setItem('theme', 'night');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
     });
 } else {
     console.log("Change mode button not found.");
 }
 
+
+
+//aut-form
+window.onload = function() {
+    if (localStorage.getItem('username1')) {
+        showLogout();
+    } else {
+        showLogin();
+    }
+};
+function login() {
+    const username = document.getElementById('username1').value;
+    const password = document.getElementById('password1').value;
+
+    if (username && password) {
+        localStorage.setItem('username1', username); 
+        showLogout();
+    } else {
+        alert('Please enter both username and password');
+    }
+}
+function logout() {
+    localStorage.removeItem('username1'); 
+    showLogin();
+}
+
+function showLogin() {
+    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('logoutContainer').style.display = 'none';
+}
+
+function showLogout() {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('logoutContainer').style.display = 'block';
+    document.getElementById('usernameDisplay').textContent = localStorage.getItem('username1');
+}
 
 
 // task 3 Responding to Events with Callback
@@ -67,12 +122,12 @@ document.getElementById("multiStepForm").addEventListener("submit", (event) => {
     document.querySelectorAll('input, textarea, select').forEach(input => input.value = '');
 });
 
-// Task 1 Welcome Message
-const welcomeMessage = document.getElementById('welcomeMessage');
-const changeMessageBtn = document.getElementById('changeMessageBtn');
-changeMessageBtn.addEventListener('click', function() {
-    welcomeMessage.textContent = "Enjoy our Japanese Recipes!";
-});
+// // Task 1 Welcome Message
+// const welcomeMessage = document.getElementById('welcomeMessage');
+// const changeMessageBtn = document.getElementById('changeMessageBtn');
+// changeMessageBtn.addEventListener('click', function() {
+//     welcomeMessage.textContent = "Enjoy our Japanese Recipes!";
+// });
 
 // Task 1 Manipulating Attributes Read more
 function ReadMore(id) {
@@ -82,28 +137,4 @@ function ReadMore(id) {
     } else {
         content.style.display = "none";
     }
-}
-
-
-// Task 2 Keyboard Event Handling
-document.addEventListener('keydown', function(event) {
-    const focusedElement = document.activeElement;
-    if (focusedElement.classList.contains('nav-item')) {
-        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-            const nextElement = focusedElement.nextElementSibling;
-            if (nextElement) {
-                nextElement.focus();
-            }
-        } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-            const prevElement = focusedElement.previousElementSibling;
-            if (prevElement) {
-                prevElement.focus();
-            }
-        }
-    }
-});
-
-function handleSuccess() {
-    const successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'block'; 
 }
