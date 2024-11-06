@@ -14,7 +14,7 @@
   - After logging in, the user's data is saved in `localStorage`, which allows you to save authorizations when the page is reloaded.
   - When logging out, the user's data is cleared from the `localStorage`.
 
-###3. Light/Dark Mode
+### 3. Light/Dark Mode
   - The switch allows users to choose between a light and dark theme.
   - The selected theme is saved in `localStorage`, user selections are saved even when switching to other pages and updating the browser.
 
