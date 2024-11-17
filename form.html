@@ -27,31 +27,30 @@
                             <a class="nav-link" href="recipes.html">Recipes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="authentication.html">Login/Logout</a>
+                            <a class="nav-link" href="form.html">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="authMenuLink" href="authentication.html">Login/Logout</a>
                         </li>
                         
                     </ul>
-                    <button id="changeColorBtn" class="change-color-btn ms-3">Change Background Color</button>
+                   
                     <button id="changeModeBtn" class="change-color-btn ms-3"> light/Night mode</button>
                     <button id="playSoundButton" class="change-color-btn ms-3" >Play Sound</button>
-                    
                 </div>
             </div>
         </nav>
         <div class="text-center mt-3" id="dateTime"></div>
     </header>
 
-
     <main class="form-page">
         <h1>Send the Recipe</h1>
         <form id="recipeForm" action="submit_form.html" method="post">
             <fieldset>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Name:</label>
                     <input type="text" id="name" name="name" class="form-control"  placeholder="Enter your name">
                 </div>
                 <div class="mb-3">
-                    <label for="category" class="form-label">Category:</label>
                     <select id="category" name="category" class="form-select" >
                         <option value="">Select a category</option>
                         <option value="hot_dish">Foods</option>
@@ -60,7 +59,6 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="recipe" class="form-label">Recipe description:</label>
                     <textarea id="recipe" name="recipe" class="form-control" rows="5"  placeholder="Describe your recipe"></textarea>
                 </div>
                 <div class="button-container">

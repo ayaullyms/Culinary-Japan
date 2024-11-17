@@ -11,8 +11,11 @@ body {
 
 .navbar-brand {
     color: #333;
-        
     font-weight: bold;
+}
+
+.night-theme .navbar-brand {
+    color: #fffbfb;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -40,7 +43,7 @@ body {
 
 }
 
-.night-theme .navbar-nav .nav-item .nav-link  {
+.night-theme .navbar-nav .nav-item .nav-link {
     color:#ddd;
 }
 
@@ -54,19 +57,80 @@ body {
     color: #f8feff;
 }
 
+.night-theme .accordion-title:hover {
+    background-color: #2578b0;
+}
+
 .night-theme .more-button{
     background-color: #17496a;
     color: #f8feff;
 }
 
+.night-theme .more-button:hover{
+    background-color: #2578b0;
+}
+
 .night-theme .change-color-btn {
-    background-color: #17496a;
+    background-color: #566a7d;
     color: #fff;
 }
 
-/* .greeting-container {
-    text-align: center;
-} */
+.night-theme .change-color-btn:hover{
+    background-color: #2578b0;
+}
+
+.night-theme #dateTime{
+    color: #fff;
+}
+
+.night-theme .recipes-section h2{
+    color: #fff;
+}
+
+.night-theme .recipe-more p{
+    color: #000000;
+}
+
+.night-theme .filter-buttons button{
+    background-color: #17496a;
+}
+
+.night-theme .filter-buttons button:hover{
+    background-color: #2578b0;
+}
+
+.night-theme .search-button{
+    background-color: #17496a;
+}
+
+.night-theme .search-button:hover{
+    background-color: #2578b0;
+}
+
+.night-theme .form-step .next-button{
+    background-color: #17496a;
+}
+
+.night-theme .form-step .next-button:hover{
+    background-color: #2578b0;
+}
+
+.night-theme .button-container1 .btn-primary {
+    background-color: #17496a;
+
+}
+
+.night-theme .button-container1 .btn-primary:hover {
+    background-color: #2578b0;
+}
+
+.night-theme .button-container1 .btn-secondary {
+    background-color: #17496a;
+}
+
+.night-theme .button-container1 .btn-secondary:hover {
+    background-color: #2578b0;
+}
 
 .content-wrapper {
     display: flex;
@@ -105,6 +169,43 @@ body {
     color: #2c3e50;
 }
 
+.recipe-search {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 70%;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #FF8C00;
+    color: #FFF4E6;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #e74c3c;
+    color: #FFF4E6;
+}
+
 .recipe-card {
     background-color: #fff;
     border-radius: 10px;
@@ -127,11 +228,6 @@ body {
     color: #2c3e50;
 }
 
-/* .recipe-description {
-    font-size: 1em;
-    color: #7f8c8d;
-    margin: 5px 0;
-} */
 
 #recipe-page h2, #recipe-page figure {
     text-align: center;
@@ -150,7 +246,6 @@ body {
 
 .more-button:hover {
     background-color: #ff8d03;
-    color: #e74c3c;
 }
 
 .more-button:focus {
@@ -209,6 +304,7 @@ body {
     color: #2c3e50;
 }
 
+
 .auth-form, #logoutContainer {
     display: flex;
     flex-direction: column;
@@ -242,21 +338,21 @@ body {
 }
 
 .button-container1 .btn-primary {
-    background-color: #007bff;
+    background-color: #FF8C00;
     color: white;
 }
 
 .button-container1 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #e74c3c;
 }
 
 .button-container1 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #FF8C00;
     color: white;
 }
 
 .button-container1 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: #e74c3c;
 }
 
 #logoutContainer p {
@@ -264,7 +360,6 @@ body {
     margin-bottom: 10px;
     color: #333;
 }
-
 
 .faq-section {
     max-width: 800px;
@@ -335,27 +430,6 @@ button {
     font-size: 1.2em;
     color: #333;
     margin-top: 10px;
-}
-
-.popup-form {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 400px;
-    width: 100%;
-    position: relative;
 }
 
 .close-btn {

@@ -9,17 +9,6 @@
 displayDateTime();
 setInterval(displayDateTime, 60000);
 
-
- // Task 4 Change Background Color 
- document.getElementById('changeColorBtn').addEventListener('click', changeBackgroundColor);
- const colors = ['#F0E68C' , '#ADD8E6' , '#FAF0E6' , '#E0FFFF' , '#E6E6FA'];
- function changeBackgroundColor() {
-     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-     document.body.style.backgroundColor = randomColor;
- }
-
-
-
 // Task 2 Switch Statements + filter 
 function filterRecipes(category) {
     localStorage.setItem('recipeFilter', category);
@@ -91,42 +80,6 @@ document.getElementById('recipeForm').addEventListener('submit', function(event)
     }
 
     alert("Form submitted successfully!");
-    this.submit();
+    this.submit();  
 });
-
-// Task 2 Accordion for FAQs or Content Sections
-let accordion = document.getElementsByClassName('accordion-title');
-if (accordion.length > 0) {
-    for (let i = 0; i < accordion.length; i++) {
-        accordion[i].addEventListener('click', function() {
-            let content = this.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        });
-    }
-}
-
-
-// Task 3 Popup Subscription
-const popupForm = document.getElementById('popupForm');
-const openPopup = document.getElementById('openPopup');
-const closePopup = document.getElementById('closePopup');
-
-openPopup.addEventListener('click', function() {
-    popupForm.style.display = 'flex'; 
-});
-
-closePopup.addEventListener('click', function() {
-    popupForm.style.display = 'none'; 
-});
-
-window.addEventListener('click', function(event) {
-    if (event.target === popupForm) {
-        popupForm.style.display = 'none'; 
-    }
-});
-
-
-
-
-
 

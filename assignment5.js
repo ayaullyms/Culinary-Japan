@@ -1,11 +1,3 @@
-// // Task 1 Welcome Message
-// const welcomeMessage = document.getElementById('welcomeMessage');
-// const changeMessageBtn = document.getElementById('changeMessageBtn');
-// changeMessageBtn.addEventListener('click', function() {
-//     welcomeMessage.textContent = "Enjoy our Japanese Recipes!";
-// });
-
-
 // Task 1 Manipulating Attributes STAR STAR STAR
 document.querySelectorAll('.rating .star').forEach(star => {
     star.addEventListener('click', function() {
@@ -43,30 +35,42 @@ if (changeModeBtn) {
     console.log("Change mode button not found.");
 }
 
-
-
 //aut-form
 window.onload = function() {
+    updateMenuText(); 
     if (localStorage.getItem('username1')) {
         showLogout();
     } else {
         showLogin();
     }
+
+    document.getElementById('authMenuLink').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        if (localStorage.getItem('username1')) {
+            logout();
+        } else {
+            window.location.href = "authentication.html"; 
+        }
+    });
 };
+
 function login() {
     const username = document.getElementById('username1').value;
     const password = document.getElementById('password1').value;
 
     if (username && password) {
-        localStorage.setItem('username1', username); 
+        localStorage.setItem('username1', username);
         showLogout();
+        updateMenuText();
     } else {
         alert('Please enter both username and password');
     }
 }
+
 function logout() {
-    localStorage.removeItem('username1'); 
+    localStorage.removeItem('username1');
     showLogin();
+    updateMenuText();
 }
 
 function showLogin() {
@@ -80,6 +84,25 @@ function showLogout() {
     document.getElementById('usernameDisplay').textContent = localStorage.getItem('username1');
 }
 
+function updateMenuText() {
+    const authMenuLink = document.getElementById('authMenuLink');
+    if (localStorage.getItem('username1')) {
+        authMenuLink.textContent = 'Logout';
+    } else {
+        authMenuLink.textContent = 'Login';
+    }
+}
+
+// Task 2 Accordion for FAQs or Content Sections
+document.addEventListener('DOMContentLoaded', function() {
+    let accordion = document.getElementsByClassName('accordion-title');
+    for (let i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener('click', function() {
+            let content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+    }
+});
 
 // task 3 Responding to Events with Callback
 let currentStep = 0;
@@ -121,13 +144,6 @@ document.getElementById("multiStepForm").addEventListener("submit", (event) => {
  document.getElementById('resetFormBtn').addEventListener('click', function() {
     document.querySelectorAll('input, textarea, select').forEach(input => input.value = '');
 });
-
-// // Task 1 Welcome Message
-// const welcomeMessage = document.getElementById('welcomeMessage');
-// const changeMessageBtn = document.getElementById('changeMessageBtn');
-// changeMessageBtn.addEventListener('click', function() {
-//     welcomeMessage.textContent = "Enjoy our Japanese Recipes!";
-// });
 
 // Task 1 Manipulating Attributes Read more
 function ReadMore(id) {
