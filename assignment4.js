@@ -1,14 +1,3 @@
-// Task 5 Display Current Date and Time
- function displayDateTime() {
-    const dateTimeElement = document.getElementById('dateTime'); 
-    const now = new Date(); 
-    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
-    dateTimeElement.innerHTML = now.toLocaleString('en-US', options); 
-}
-
-displayDateTime();
-setInterval(displayDateTime, 60000);
-
 // Task 2 Switch Statements + filter 
 function filterRecipes(category) {
     localStorage.setItem('recipeFilter', category);
