@@ -9,10 +9,10 @@
   - On a separate page there are recipes of Japanese cuisine with filtering by category (for example, Sweet, Drink, Hot Dish).
   - The filter selection is saved in `localStorage` so that the user filter settings remain unchanged when the page is reloaded.
 
-### 2. User authentication
-  - An entry/exit system that stores user information in `localStorage'.
-  - After logging in, the user's data is saved in `localStorage`, which allows you to save authorizations when the page is reloaded.
-  - When logging out, the user's data is cleared from the `localStorage`.
+### 2. Authentication (Login/logout/registration system)
+  - **Registration**: Checking all information , saving data in `localStorage'.
+  - **Login**: User data is saved in `localStorage` and displayed on reboot.
+  - **Exit**: Data is deleted from `localStorage'.
 
 ### 3. Light/Dark Mode
   - The switch allows users to choose between a light and dark theme.
@@ -23,7 +23,10 @@
    - Enables input verification at each step.
 
 ### 5. Other elements
-   - **Random background color change**: Random background color generator for variety.
    - **Star rating system**: Users can rate recipes by choosing the number of stars.
-   - **Pop-up subscription form**: for subscribing to the site's blog. 
    - **Accordion FAQ**: Frequently asked questions are slim in accordion format.
+   - **Display Current Date and Time**: The current date and time are displayed every minute.
+   - **Song Playback**: A button that plays an audio file when clicked.
+   - **Form Validation**:To send recipes to users. Checks the recipe submission form so that the user provides information (name, category, description of the recipe).
+   - **Reset Form Fields**:Resets the values of all input fields in the form when the reset button is pressed.
+   - **Read More Toggle**: Toggles the visibility of additional content when the "Read More" link is clicked.
