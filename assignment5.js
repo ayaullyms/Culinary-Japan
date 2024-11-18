@@ -82,7 +82,6 @@ function login() {
     }
 }
 
-
 function logout() {
     localStorage.removeItem('username1');
     showLogin();
