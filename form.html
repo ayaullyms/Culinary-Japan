@@ -32,11 +32,13 @@
                         <li class="nav-item">
                             <a class="nav-link" id="authMenuLink" href="authentication.html">Login/Logout</a>
                         </li>
-                        
                     </ul>
-                   
-                    <button id="changeModeBtn" class="change-color-btn ms-3"> light/Night mode</button>
-                    <button id="playSoundButton" class="change-color-btn ms-3" >Play Sound</button>
+                    <button id="changeModeBtn" class="change-color-btn ms-3 animated-btn">
+                        <img src="mode_icon.svg" alt="Toggle Theme" width="24" height="24">
+                    </button>
+                    <button id="playSoundButton" class="change-color-btn ms-3 animated-btn">
+                        <img src="music.svg" alt="Play Sound" width="24" height="24">
+                    </button>
                 </div>
             </div>
         </nav>
@@ -45,13 +47,13 @@
 
     <main class="form-page">
         <h1>Send the Recipe</h1>
-        <form id="recipeForm" action="submit_form.html" method="post">
+        <form id="recipeForm" action="form.html" method="post">
             <fieldset>
                 <div class="mb-3">
-                    <input type="text" id="name" name="name" class="form-control"  placeholder="Enter your name">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
                 </div>
                 <div class="mb-3">
-                    <select id="category" name="category" class="form-select" >
+                    <select id="category" name="category" class="form-select">
                         <option value="">Select a category</option>
                         <option value="hot_dish">Foods</option>
                         <option value="dessert">Desserts</option>
@@ -59,16 +61,16 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <textarea id="recipe" name="recipe" class="form-control" rows="5"  placeholder="Describe your recipe"></textarea>
+                    <textarea id="recipe" name="recipe" class="form-control" rows="5" placeholder="Describe your recipe"></textarea>
                 </div>
                 <div class="button-container">
                     <button type="submit" class="btn btn-secondary">Send</button>
-                    <button type="button" id="resetFormBtn" class="btn btn-danger">Reset Form</button>
+                    <button type="button" id="resetFormBtn" class="btn btn-danger">Reset form</button>
                 </div>
             </fieldset>
         </form>
-    </main> 
-
+    </main>
+    
     <main class="form-page">
         <h1>Send the feedback</h1>
         <form id="multiStepForm">
@@ -83,13 +85,19 @@
             <div class="form-step" id="step-2" style="display: none;">
                 <h2>Step 2: Contact Information</h2>
                 <input type="email" name="email" placeholder="Email">
-                <input type="tel" name="phone" placeholder="Phone">
+                <button type="button" class="back-button">Back</button>
+                <button type="button" class="next-button">Next</button>
+            </div>
+
+            <div class="form-step" id="step-2" style="display: none;">
+                <h2>Step 3: Your suggestion about the website?</h2>
+                <textarea id="recipe" name="recipe" class="form-control" rows="5"></textarea>
                 <button type="button" class="back-button">Back</button>
                 <button type="button" class="next-button">Next</button>
             </div>
 
             <div class="form-step" id="step-3" style="display: none;">
-                <h2>Step 3: If we added a blog with cooking tips and cultural articles, would you be interested?</h2>
+                <h2>Step 4: If we added a blog with cooking tips and cultural articles, would you be interested?</h2>
                 <label>
                     <input type="checkbox" name="interests" value="yes">yes
                 </label>

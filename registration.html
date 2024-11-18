@@ -44,30 +44,29 @@
     </header>
     
     <main class="form-page1">
-        <h1>Authentication</h1>
-        
-        <form id="loginForm" class="auth-form">
+        <h1>Registration</h1>
+        <form id="registrationForm" class="auth-form">
             <fieldset>
                 <div class="mb-3">
-                    <input type="text" id="username1" name="username1" class="form-control" placeholder="Enter your username">
+                    <input type="text" id="newUsername" name="newUsername" class="form-control" placeholder="Choose a username">
                 </div>
                 <div class="mb-3">
-                    <input type="password" id="password1" name="password1" class="form-control" placeholder="Enter your password">
+                    <input type="email" id="newEmail" name="newEmail" class="form-control" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <input type="tel" id="newPhone" name="newPhone" class="form-control" placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number format: 123-456-7890">
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="newPassword" name="newPassword" class="form-control" placeholder="Choose a password">
                 </div>
                 <div class="button-container1">
-                    <button type="button" class="btn btn-primary" onclick="login()">Login</button>
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='Registration.html'">Register</button>
+                    <button type="button" class="btn btn-primary" onclick="register()">Register</button>
                 </div>
-                
             </fieldset>
         </form>
-        <div id="logoutContainer" class="button-container1" style="display: none;">
-            <p>Welcome, <span id="usernameDisplay"></span>!</p>
-            <p>Email: <span id="emailDisplay"></span></p>
-            <p>Phone: <span id="phoneDisplay"></span></p>
-            <button type="button" class="btn btn-secondary" onclick="logout()">Logout</button>
-        </div>
-    </main> 
+    </main>
+
+    
     
     <footer >
         <p>Sailau Ayaulym</p>
